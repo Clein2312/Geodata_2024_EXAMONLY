@@ -1,16 +1,16 @@
-# EE_3.07 Geodata Management Systems WS2023-2 - <br> Final Assignment
+# EE_3.07 Geodata Management Systems 2024-3 - <br> Final Assignment
 
 ## 0. General Remarks
 
 1. This assignment is Only for the students of Environment and Energy. The groups formed by the **Msc.-Information Engineering and Computer Science will have a different assignment**
-2. Due date is **Monday 2024-02-29T23:59:59CET**. 
-1. You can withdraw from exam registration until a week before! 
+2. Due date is **Monday 2024-09-16T23:59:59CET**. 
+1. You can withdraw from exam registration until two weeks before! 
 3. You do not have to write a formal report but you have to sketch the steps you have taken to do the analyses. The code you are uploading as well as additional documentation including a video has to **enable us to redo your work completely!** You must tell us which data you use and where to download it.
 4. You can work in **groups of 1 - 3 students**. You have do the **group assignment** in our [Geodata Moodle course](https://moodle.hochschule-rhein-waal.de/course/view.php?id=17109) <br> Assign to a group even if you **work alone**.
 6. Create **one zip file** which contains all your work but **do not add very big data!** 
-7. **USE THE FOLLWING REPO NAME:** `GeoData_WS2023_2_Final_<Group ID>`, (e.g. GeoData_WS2023_2_Final_Group_Z). 
+7. **USE THE FOLLWING REPO NAME:** `GeoData_WS2023_3_Final_<Group ID>`, (e.g. GeoData_WS2023_3_Final_Group_Z). 
 8. **Upload** your zip file to the **Moodle** upload area. 
-10. Use a `REAMDE.md` file (and more .md-files, if needed) to describe your work. Upload your Python/Jupyter scripts as well as QGIS projects but **do not add very large datasets** (e.g. no satellite images, excessive DTM tiles in XYZ format, etc.) to your project folder. In case you use very large datasets **share the link to the data** in your documentation and/or your code and describe how to download and store it locally. I would expect local folders like  `<YOUR REPO>/data/...`. 
+10. Use a `README.md` file (and more .md-files, if needed) to describe your work. Upload your Python/Jupyter scripts as well as QGIS projects but **do not add very large datasets** (e.g. no satellite images, excessive DTM tiles in XYZ format, etc.) to your project folder. In case you use very large datasets **share the link to the data** in your documentation and/or your code and describe how to download and store it locally. I would expect local folders like  `<YOUR REPO>/data/...`. 
 11. In case you **you produce very large datasets** tell us how and **enable us to reproduce your results** instead of flooding your repo with big data.
 13. You have to **produce a presentation** (i.e. Powerpoint or similar) and upload it to your git repo. Describe the **individual tasks**. See the **pptx-template** provided in this assignment repo. The pptx template includes a **self-assessment**. In case you work in groups each member has to provide a self-assessment. 
 14. You have to **produce one video per group on your presentation** and add it to the zip you upload. **All students must take part in their group's video presentation**. The video is to present the slides with your results. **Do not explain every detail** in the video, e.g. do not explain how to execute your code line by line, etc. **Just present each task, your methods, and your results**. Refer (name or link) to your code files as well as QGIS projects in your slides such we can reproduce your work if we want.
@@ -24,14 +24,14 @@ The British meteorologist Ed Hawkins from the National Centre for Atmospheric Sc
 You have to produce a similar plot but with several stripes in one diagram. Each stripe would represent the development of annual temperatures at a selection of stations. 
 
 **Sub-Task 1.1:** <br>
-Select the stations which are (1) in Bayern, (2) still active and (3) started before 1950. It should be **# stations.** Use **Pandas** to read the station description file [KL_Jahreswerte_Beschreibung_Stationen.txt] (https://opendata.dwd.de/climate_environment/CDC/observations_germany/climate/annual/kl/historical/KL_Jahreswerte_Beschreibung_Stationen.txt) from the historical KL data collection.
+Select the stations which are (1) in **Baden Württemberg**, (2) **still active** and (3) **started before 1950**. It should be **26 stations.** Use **Pandas** to read the station description file [KL_Jahreswerte_Beschreibung_Stationen.txt] (https://opendata.dwd.de/climate_environment/CDC/observations_germany/climate/annual/kl/historical/KL_Jahreswerte_Beschreibung_Stationen.txt) from the historical KL data collection.
 
 Have a look at the available Jupyter notebooks in the geodata git repository. Especially the following could be a good starting point: [gdms0180_DWD_NRW_Annual_Temp_vs_Altitude/gnb0181_DWD_NRW_Annual_Temp_vs_Altitude_V001.ipynb](../gdms0180_DWD_NRW_Annual_Temp_vs_Altitude/gnb0181_DWD_NRW_Annual_Temp_vs_Altitude_V001.ipynb)
 
 Modify the notebook according to your needs. 
 
 **Sub-Task 1.2:** <br>
-Use geopandas in your Jupyter notebook to create a geopackage layer with exactly the stations matching the above criteria. Load this into QGIS and use the Bayern WMS service with the topographic map collection as a background map [DTK500](https://geodatenonline.bayern.de/geodatenonline/seiten/wms_uk500). Create a nicely designed and completely annotated map using EPSG:25832. Use the station IDs together with the station names as labels.  
+Use geopandas in your Jupyter notebook to create a geopackage layer with exactly the stations matching the above criteria. Load this into QGIS and use the Baden Württember WMS service with the topographic map collection as a background map [DT50](https://metadaten.geoportal-bw.de/geonetwork/srv/ger/catalog.search#/metadata/34808301-274f-e5aa-fde0-15f2fff6fa9e). Create a nicely designed and completely annotated map using EPSG:25832. Use the station IDs together with the station names as labels.  
 
 **Sub-Task 1.3:** <br>
 Extend your Jupyter notebook to **automatically download** (using ftplib, wget, or similar) the annual temperature data from the KL data collection, i.e. which automatically downloads the data according to the selected station IDs in the station info dataframe from here: 

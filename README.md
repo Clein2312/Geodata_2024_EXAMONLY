@@ -6,4 +6,4 @@ Please also check the associated **HSRW Moodle course** named "**8136 Fund. of G
 
 Please find your project tasks [HERE.](gdms0000_Final_Assignment)
 
-Last [course (lecture) material of WS2022](https://github.com/Clein2312/Geodata_Geoinfo_GIS_WS2023).
+Last [course (lecture) material of WS2023](https://github.com/Clein2312/Geodata_Geoinfo_GIS_WS2023).

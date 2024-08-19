@@ -2,7 +2,7 @@
 
 This is an **EXAM ONLY** repository for **Winter Semester WS2024, Phase 1 (Sept./Oct. 2024).**
 
-Please also check the associated **HSRW Moodle course** named "**8136 Fund. of Geodata Mgmt. Systems, WS2024_1 EXAM"**
+Please also check the associated **HSRW Moodle course** named "**81361 Fund. of Geodata Mgmt. Systems, WS2024_1 EXAM"**
 
 Please find your project tasks [HERE.](gdms0000_Final_Assignment)
 
